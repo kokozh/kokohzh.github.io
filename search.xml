@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>多线程小说爬取+本地保存</title>
+    <url>/2019/11/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B0%8F%E8%AF%B4%E7%88%AC%E5%8F%96+%E6%9C%AC%E5%9C%B0%E4%BF%9D%E5%AD%98/</url>
+    <content><![CDATA[<h1 id="多线程小说爬取-本地保存-（2019-11-15）"><a href="#多线程小说爬取-本地保存-（2019-11-15）" class="headerlink" title="多线程小说爬取+本地保存 （2019/11/15）"></a>多线程小说爬取+本地保存 （2019/11/15）</h1><h3 id="只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！"><a href="#只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！" class="headerlink" title="只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！"></a>只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！</h3><h4 id="github-https-github-com-kokozh-novel"><a href="#github-https-github-com-kokozh-novel" class="headerlink" title="github: https://github.com/kokozh/novel"></a>github: <a href="https://github.com/kokozh/novel" target="_blank" rel="noopener">https://github.com/kokozh/novel</a></h4><a id="more"></a>
+
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><pre><code>* PYTHON
+* requests库
+* re库
+* multiprocessing库
+* time库
+* os库</code></pre><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><pre><code>* 网页并不复杂，就分析提取信息，然后本地保存
+* 多线程提取信息</code></pre><h2 id="函数说明"><a href="#函数说明" class="headerlink" title="函数说明"></a>函数说明</h2><pre><code>* get_page()  返回信息页面
+* get_data()  获取信息并保存</code></pre><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><pre><code>* book保存爬取的小说数据
+* novel.py 为主程序</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h4 id="这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）"><a href="#这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）" class="headerlink" title="这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）"></a>这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）</h4>]]></content>
+  </entry>
+  <entry>
+    <title>淘宝模拟登录 + 商品爬取</title>
+    <url>/2019/11/16/%E6%B7%98%E5%AE%9D%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%20+%20%E5%95%86%E5%93%81%E7%88%AC%E5%8F%96/</url>
+    <content><![CDATA[<h1 id="淘宝模拟登录-商品爬取-（2019-11-7）"><a href="#淘宝模拟登录-商品爬取-（2019-11-7）" class="headerlink" title="淘宝模拟登录 + 商品爬取 （2019/11/7）"></a>淘宝模拟登录 + 商品爬取 （2019/11/7）</h1><h4 id="github：https-github-com-kokozh-taobao"><a href="#github：https-github-com-kokozh-taobao" class="headerlink" title="github：https://github.com/kokozh/taobao"></a>github：<a href="https://github.com/kokozh/taobao" target="_blank" rel="noopener">https://github.com/kokozh/taobao</a></h4><a id="more"></a>
+
+<h2 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h2><pre><code>* PYTHON
+* requests库
+* time库
+* re库</code></pre><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><pre><code>* 检查此账号需不需要验证（滑动验证/验证码）
+* 浏览器/工具 获取ua和加密后的密码(一劳永逸的方法)
+* post请求登录url获取st申请url
+* 根据获得的st申请地址获取st码
+* 用st码登录，提取重定向网址，存储 cookie
+* 用cookie向其它页面发送请求，获取信息</code></pre><h2 id="函数说明"><a href="#函数说明" class="headerlink" title="函数说明"></a>函数说明</h2><pre><code>* check_login()       #检查账号是否需要滑块验证
+* login_get_st()      #登录验证获取st申请地址
+* get_st()            #获取st码
+* st_login()          #使用st登录淘宝
+* test()              #商品爬取测试
+* test2()             #个人页面测试</code></pre><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><pre><code>* demo文件夹存放代码文件
+* data文件夹存放爬取的数据</code></pre><h2 id="未来完善升级想法"><a href="#未来完善升级想法" class="headerlink" title="未来完善升级想法"></a>未来完善升级想法</h2><pre><code>* 将验证账号和登录方法封装在一起
+* 采用IP代理更好的的获取信息
+* cookie序列化减少重复登录（已完成）
+* 采用框架实现模拟滑动操作，极大的提高信息的获取效率
+* 采用多线程或分布式，将信息获取速度最大化
+* 挺粗糙的一个作品哈哈，有空会继续优化的</code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>优酷弹幕词云分析</title>
+    <url>/2019/11/16/%E4%BC%98%E9%85%B7%E5%BC%B9%E5%B9%95%E8%AF%8D%E4%BA%91%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="优酷弹幕词云分析"><a href="#优酷弹幕词云分析" class="headerlink" title="优酷弹幕词云分析"></a>优酷弹幕词云分析</h1><h3 id="注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源"><a href="#注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源" class="headerlink" title="注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源"></a>注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源</h3><h4 id="github：https-github-com-kokozh-YOKU-python"><a href="#github：https-github-com-kokozh-YOKU-python" class="headerlink" title="github：https://github.com/kokozh/YOKU_python"></a>github：<a href="https://github.com/kokozh/YOKU_python" target="_blank" rel="noopener">https://github.com/kokozh/YOKU_python</a></h4><p>&nbsp;  <a id="more"></a></p>
+<p><strong>最近刚好在学习爬虫与数据分析，就想拿优酷的这部《我不能恋爱的女朋友》来分析一下，哈哈哈哈我也有在看，剧情有点搞笑。闲话不多说，进入主题吧！</strong></p>
+<h4 id="技术方案"><a href="#技术方案" class="headerlink" title="技术方案"></a>技术方案</h4><ul>
+<li>分析弹幕加载方式，用requests库进行爬取</li>
+<li>这里就只爬取8集的弹幕</li>
+<li>数据清洗（这里由于不是获取指定弹幕内容故没有数据清洗）</li>
+<li>将弹幕做成词云</li>
+</ul>
+<p>&nbsp;</p>
+<h4 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h4><ul>
+<li><p>找到弹幕接口url </p>
+<ol>
+<li>打开某酷网站，等待广告加载完播放开始后，按f12调出浏览器调试窗口，复制一条弹幕，然后按ctrl+f 进行搜索。<br><img src="https://i.loli.net/2019/10/21/7YJ61khLg3QwqiH.png" alt="1.png"> &nbsp; </li>
+<li>点击搜索到的数据，点击header按钮，记住弹幕接口Url、请求头 Headers 和 Referer、 User-Agent 参数。<br><img src="https://i.loli.net/2019/10/21/7cjLYSrWyqVKD1t.png" alt="2.png"><br>&nbsp; </li>
+</ol>
+</li>
+<li><p>requests库构造请求，返回网页数据</p>
+</li>
+</ul>
+<p>&nbsp; </p>
+<ul>
+<li><p>提取弹幕数据<br>  <img src="https://i.loli.net/2019/10/21/zqtylcUAS6ndNEu.png" alt="3.png"><br>&nbsp; </p>
+</li>
+<li><p>根据分析，发现弹幕接口 Url 中mat后接的数字是每表示分钟 ，iid后接的是第几集的id号<br><img src="https://i.loli.net/2019/10/21/o9VXaOIuA4qvC5w.png" alt="43.png"></p>
+<p>&nbsp; </p>
+</li>
+<li><p>这部电视剧40分钟左右一集，我们取40分钟，剩下的集数id我们需要再去获取。</p>
+<ol>
+<li>我们将刚才找到的iid查找一下，在Preview里发现我们需要的集数iid就在这里<br><img src="https://i.loli.net/2019/10/21/RvBxYS65ioTpuFJ.png" alt="88.png"><br><img src="https://i.loli.net/2019/10/21/BDbcvPNIqluftOM.png" alt="15.png"><br>&nbsp; </li>
+<li>记录下cookies，用requests请求返回网页数据<br><img src="https://i.loli.net/2019/10/21/8dbhCQBL3lfqWIF.png" alt="41230.png"><br>&nbsp; </li>
+</ol>
+</li>
+<li><p>提取集数id数据<br><img src="https://i.loli.net/2019/10/21/pOCm8c57LbyXktS.png" alt="7.png"><br>&nbsp; </p>
+</li>
+<li><p>到这里，弹幕数据就可以爬取下来了。我们可以将弹幕数据保存下来（我这里没有），最后是将弹幕数据做成词云<br><img src="https://i.loli.net/2019/10/21/cCKNvXmdnteEFfM.png" alt="wordcloud.png"><br>&nbsp; </p>
+</li>
+</ul>
+<h3 id="数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。"><a href="#数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。" class="headerlink" title="数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。"></a>数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。</h3><p>&nbsp; </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>selenium爬取京东商品+MongoDB保存</title>
+    <url>/2019/11/16/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/</url>
+    <content><![CDATA[<h1 id="selenium爬取京东商品-MongoDB保存"><a href="#selenium爬取京东商品-MongoDB保存" class="headerlink" title="selenium爬取京东商品+MongoDB保存"></a>selenium爬取京东商品+MongoDB保存</h1><h4 id="github：https-github-com-kokozh-JD"><a href="#github：https-github-com-kokozh-JD" class="headerlink" title="github：https://github.com/kokozh/JD"></a>github：<a href="https://github.com/kokozh/JD" target="_blank" rel="noopener">https://github.com/kokozh/JD</a></h4><a id="more"></a>
+
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><pre><code>* PYTHON
+* 已安装MongoDB数据库
+* Chrome浏览器 / chromedriver
+* selenium库
+* pymongo库
+* time库</code></pre><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><pre><code>* 定位商品搜索框/提交按钮
+* 模拟输入和搜索
+* 京东商品的展示是先加载一部分，等滑到一半再加载剩下的，这里我直接将滑块拉到最底部
+* 智能等待页面渲染完成
+* 信息提取加保存，自动翻页</code></pre><h2 id="函数说明"><a href="#函数说明" class="headerlink" title="函数说明"></a>函数说明</h2><pre><code>* get_page()  提交搜索，返回页面
+* get_data()   提取所需信息
+* click_next()  点击下一页
+* save_mongodb()   保存到MongoDB
+* save_excel()   保存成csv文件</code></pre><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><pre><code>* data文件夹存放爬取数据</code></pre><h2 id="闲聊"><a href="#闲聊" class="headerlink" title="闲聊"></a>闲聊</h2><h4 id="selenium虽然简单方便，但是速度太慢了，要是网页有许多图片又有很多异步加载，那凉凉。但是用selenium来做辅助操作，配合别的库一起使用却有意想不到的效果。"><a href="#selenium虽然简单方便，但是速度太慢了，要是网页有许多图片又有很多异步加载，那凉凉。但是用selenium来做辅助操作，配合别的库一起使用却有意想不到的效果。" class="headerlink" title="selenium虽然简单方便，但是速度太慢了，要是网页有许多图片又有很多异步加载，那凉凉。但是用selenium来做辅助操作，配合别的库一起使用却有意想不到的效果。"></a>selenium虽然简单方便，但是速度太慢了，要是网页有许多图片又有很多异步加载，那凉凉。但是用selenium来做辅助操作，配合别的库一起使用却有意想不到的效果。</h4>]]></content>
+  </entry>
+</search>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="https://www.w3.org/2005/Atom">
+  <title>ko</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://koko.ga/"/>
+  <updated>2019-11-17T09:50:46.046Z</updated>
+  <id>http://koko.ga/</id>
+  
+  <author>
+    <name>ko君</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>多线程小说爬取+本地保存</title>
+    <link href="http://koko.ga/2019/11/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B0%8F%E8%AF%B4%E7%88%AC%E5%8F%96+%E6%9C%AC%E5%9C%B0%E4%BF%9D%E5%AD%98/"/>
+    <id>http://koko.ga/2019/11/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B0%8F%E8%AF%B4%E7%88%AC%E5%8F%96+%E6%9C%AC%E5%9C%B0%E4%BF%9D%E5%AD%98/</id>
+    <published>2019-11-16T11:52:06.968Z</published>
+    <updated>2019-11-17T09:50:46.046Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;多线程小说爬取-本地保存-（2019-11-15）&quot;&gt;&lt;a href=&quot;#多线程小说爬取-本地保存-（2019-11-15）&quot; class=&quot;headerlink&quot; title=&quot;多线程小说爬取+本地保存 （2019/11/15）&quot;&gt;&lt;/a&gt;多线程小说爬取+本地保存 （2019/11/15）&lt;/h1&gt;&lt;h3 id=&quot;只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！&quot;&gt;&lt;a href=&quot;#只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！&quot; class=&quot;headerlink&quot; title=&quot;只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！&quot;&gt;&lt;/a&gt;只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！&lt;/h3&gt;&lt;h4 id=&quot;github-https-github-com-kokozh-novel&quot;&gt;&lt;a href=&quot;#github-https-github-com-kokozh-novel&quot; class=&quot;headerlink&quot; title=&quot;github: https://github.com/kokozh/novel&quot;&gt;&lt;/a&gt;github: &lt;a href=&quot;https://github.com/kokozh/novel&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/kokozh/novel&lt;/a&gt;&lt;/h4&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>淘宝模拟登录 + 商品爬取</title>
+    <link href="http://koko.ga/2019/11/16/%E6%B7%98%E5%AE%9D%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%20+%20%E5%95%86%E5%93%81%E7%88%AC%E5%8F%96/"/>
+    <id>http://koko.ga/2019/11/16/%E6%B7%98%E5%AE%9D%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%20+%20%E5%95%86%E5%93%81%E7%88%AC%E5%8F%96/</id>
+    <published>2019-11-16T11:51:25.630Z</published>
+    <updated>2019-11-17T09:50:02.768Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;淘宝模拟登录-商品爬取-（2019-11-7）&quot;&gt;&lt;a href=&quot;#淘宝模拟登录-商品爬取-（2019-11-7）&quot; class=&quot;headerlink&quot; title=&quot;淘宝模拟登录 + 商品爬取 （2019/11/7）&quot;&gt;&lt;/a&gt;淘宝模拟登录 + 商品爬取 （2019/11/7）&lt;/h1&gt;&lt;h4 id=&quot;github：https-github-com-kokozh-taobao&quot;&gt;&lt;a href=&quot;#github：https-github-com-kokozh-taobao&quot; class=&quot;headerlink&quot; title=&quot;github：https://github.com/kokozh/taobao&quot;&gt;&lt;/a&gt;github：&lt;a href=&quot;https://github.com/kokozh/taobao&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/kokozh/taobao&lt;/a&gt;&lt;/h4&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>优酷弹幕词云分析</title>
+    <link href="http://koko.ga/2019/11/16/%E4%BC%98%E9%85%B7%E5%BC%B9%E5%B9%95%E8%AF%8D%E4%BA%91%E5%88%86%E6%9E%90/"/>
+    <id>http://koko.ga/2019/11/16/%E4%BC%98%E9%85%B7%E5%BC%B9%E5%B9%95%E8%AF%8D%E4%BA%91%E5%88%86%E6%9E%90/</id>
+    <published>2019-11-16T11:50:49.066Z</published>
+    <updated>2019-11-17T09:50:10.244Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;优酷弹幕词云分析&quot;&gt;&lt;a href=&quot;#优酷弹幕词云分析&quot; class=&quot;headerlink&quot; title=&quot;优酷弹幕词云分析&quot;&gt;&lt;/a&gt;优酷弹幕词云分析&lt;/h1&gt;&lt;h3 id=&quot;注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源&quot;&gt;&lt;a href=&quot;#注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源&quot; class=&quot;headerlink&quot; title=&quot;注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源&quot;&gt;&lt;/a&gt;注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源&lt;/h3&gt;&lt;h4 id=&quot;github：https-github-com-kokozh-YOKU-python&quot;&gt;&lt;a href=&quot;#github：https-github-com-kokozh-YOKU-python&quot; class=&quot;headerlink&quot; title=&quot;github：https://github.com/kokozh/YOKU_python&quot;&gt;&lt;/a&gt;github：&lt;a href=&quot;https://github.com/kokozh/YOKU_python&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/kokozh/YOKU_python&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&amp;nbsp;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>selenium爬取京东商品+MongoDB保存</title>
+    <link href="http://koko.ga/2019/11/16/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/"/>
+    <id>http://koko.ga/2019/11/16/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/</id>
+    <published>2019-11-16T11:45:58.495Z</published>
+    <updated>2019-11-17T09:49:34.362Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;selenium爬取京东商品-MongoDB保存&quot;&gt;&lt;a href=&quot;#selenium爬取京东商品-MongoDB保存&quot; class=&quot;headerlink&quot; title=&quot;selenium爬取京东商品+MongoDB保存&quot;&gt;&lt;/a&gt;selenium爬取京东商品+MongoDB保存&lt;/h1&gt;&lt;h4 id=&quot;github：https-github-com-kokozh-JD&quot;&gt;&lt;a href=&quot;#github：https-github-com-kokozh-JD&quot; class=&quot;headerlink&quot; title=&quot;github：https://github.com/kokozh/JD&quot;&gt;&lt;/a&gt;github：&lt;a href=&quot;https://github.com/kokozh/JD&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/kokozh/JD&lt;/a&gt;&lt;/h4&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
