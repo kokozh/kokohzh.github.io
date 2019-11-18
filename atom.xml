@@ -89,4 +89,25 @@
     
   </entry>
   
+  <entry>
+    <title>selenium爬取京东商品+MongoDB保存</title>
+    <link href="http://koko.ga/2019/11/15/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/"/>
+    <id>http://koko.ga/2019/11/15/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/</id>
+    <published>2019-11-15T13:46:12.000Z</published>
+    <updated>2019-11-18T06:01:30.950Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;github：https-github-com-kokozh-JD&quot;&gt;&lt;a href=&quot;#github：https-github-com-kokozh-JD&quot; class=&quot;headerlink&quot; title=&quot;github：https://github.com/kokozh/JD&quot;&gt;&lt;/a&gt;github：&lt;a href=&quot;https://github.com/kokozh/JD&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/kokozh/JD&lt;/a&gt;&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="PYTHON爬虫" scheme="http://koko.ga/categories/PYTHON%E7%88%AC%E8%99%AB/"/>
+    
+    
+      <category term="PYTHON" scheme="http://koko.ga/tags/PYTHON/"/>
+    
+  </entry>
+  
 </feed>
