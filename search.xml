@@ -123,24 +123,4 @@
 <h3 id="数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。"><a href="#数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。" class="headerlink" title="数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。"></a>数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。</h3><p>&nbsp; </p>
 ]]></content>
   </entry>
-  <entry>
-    <title>selenium爬取京东商品+MongoDB保存</title>
-    <url>/2019/11/16/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/</url>
-    <content><![CDATA[<h1 id="selenium爬取京东商品-MongoDB保存"><a href="#selenium爬取京东商品-MongoDB保存" class="headerlink" title="selenium爬取京东商品+MongoDB保存"></a>selenium爬取京东商品+MongoDB保存</h1><h4 id="github：https-github-com-kokozh-JD"><a href="#github：https-github-com-kokozh-JD" class="headerlink" title="github：https://github.com/kokozh/JD"></a>github：<a href="https://github.com/kokozh/JD" target="_blank" rel="noopener">https://github.com/kokozh/JD</a></h4><a id="more"></a>
-
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><pre><code>* PYTHON
-* 已安装MongoDB数据库
-* Chrome浏览器 / chromedriver
-* selenium库
-* pymongo库
-* time库</code></pre><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><pre><code>* 定位商品搜索框/提交按钮
-* 模拟输入和搜索
-* 京东商品的展示是先加载一部分，等滑到一半再加载剩下的，这里我直接将滑块拉到最底部
-* 智能等待页面渲染完成
-* 信息提取加保存，自动翻页</code></pre><h2 id="函数说明"><a href="#函数说明" class="headerlink" title="函数说明"></a>函数说明</h2><pre><code>* get_page()  提交搜索，返回页面
-* get_data()   提取所需信息
-* click_next()  点击下一页
-* save_mongodb()   保存到MongoDB
-* save_excel()   保存成csv文件</code></pre><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><pre><code>* data文件夹存放爬取数据</code></pre><h2 id="闲聊"><a href="#闲聊" class="headerlink" title="闲聊"></a>闲聊</h2><h4 id="selenium虽然简单方便，但是速度太慢了，要是网页有许多图片又有很多异步加载，那凉凉。但是用selenium来做辅助操作，配合别的库一起使用却有意想不到的效果。"><a href="#selenium虽然简单方便，但是速度太慢了，要是网页有许多图片又有很多异步加载，那凉凉。但是用selenium来做辅助操作，配合别的库一起使用却有意想不到的效果。" class="headerlink" title="selenium虽然简单方便，但是速度太慢了，要是网页有许多图片又有很多异步加载，那凉凉。但是用selenium来做辅助操作，配合别的库一起使用却有意想不到的效果。"></a>selenium虽然简单方便，但是速度太慢了，要是网页有许多图片又有很多异步加载，那凉凉。但是用selenium来做辅助操作，配合别的库一起使用却有意想不到的效果。</h4>]]></content>
-  </entry>
 </search>
