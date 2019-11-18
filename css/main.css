@@ -1191,7 +1191,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f0039c;
+  background: #6f5cc2;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2768,6 +2768,12 @@ ul.breadcrumb li + li:last-child {
     margin: 8px 0 0;
   }
 }
+body {
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+}
 body footer > div > div {
   color: #000;
 }
@@ -2777,5 +2783,5 @@ body footer > div > div {
 }
 .main-inner {
   background: #fff;
-  opacity: 0.8;
+  opacity: 0.9;
 }

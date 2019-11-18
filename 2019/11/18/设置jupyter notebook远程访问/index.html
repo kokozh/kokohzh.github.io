@@ -45,30 +45,36 @@
   };
 </script>
 
-  <meta name="description" content="时光偷不走我上扬的嘴角">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ko">
-<meta property="og:url" content="http:&#x2F;&#x2F;koko.ga&#x2F;">
+  <meta name="description" content="设置jupyter notebook远程访问环境准备 云主机(阿里云，腾讯云，或者别的什么免费的) 系统: Ubuntu 16.06 (这是我的) 已经安装python  已经安装了jupyter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设置jupyter notebook远程访问">
+<meta property="og:url" content="http:&#x2F;&#x2F;koko.ga&#x2F;2019&#x2F;11&#x2F;18&#x2F;%E8%AE%BE%E7%BD%AEjupyter%20notebook%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE&#x2F;">
 <meta property="og:site_name" content="ko">
-<meta property="og:description" content="时光偷不走我上扬的嘴角">
+<meta property="og:description" content="设置jupyter notebook远程访问环境准备 云主机(阿里云，腾讯云，或者别的什么免费的) 系统: Ubuntu 16.06 (这是我的) 已经安装python  已经安装了jupyter">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;08&#x2F;16&#x2F;sB9doSOTRvAiWkZ.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;08&#x2F;16&#x2F;aCqmvFDSjr7cfwY.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;08&#x2F;16&#x2F;rgdpBfZaDyTqHiJ.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;08&#x2F;16&#x2F;Rm1kdqhEsJaHBZr.png">
+<meta property="og:updated_time" content="2019-11-18T01:55:09.839Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;08&#x2F;16&#x2F;sB9doSOTRvAiWkZ.png">
 
-<link rel="canonical" href="http://koko.ga/">
+<link rel="canonical" href="http://koko.ga/2019/11/18/%E8%AE%BE%E7%BD%AEjupyter%20notebook%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>ko</title>
+  <title>设置jupyter notebook远程访问 | ko</title>
   
 
 
@@ -208,88 +214,10 @@
             
 
   <div class="posts-expand">
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://koko.ga/2019/11/16/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/top.jpg">
-      <meta itemprop="name" content="ko君">
-      <meta itemprop="description" content="时光偷不走我上扬的嘴角">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ko">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/16/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/" class="post-title-link" itemprop="url">selenium爬取京东商品+MongoDB保存</a>
-        </h1>
-
-        <div class="post-meta">
-			
-		  
-            <i class="fa fa-thumb-tack"></i>
-            <font color=A0522D>置顶</font>
-            <span class="post-meta-divider">|</span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-16 19:45:58" itemprop="dateCreated datePublished" datetime="2019-11-16T19:45:58+08:00">2019-11-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-17 21:29:19" itemprop="dateModified" datetime="2019-11-17T21:29:19+08:00">2019-11-17</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <h1 id="selenium爬取京东商品-MongoDB保存"><a href="#selenium爬取京东商品-MongoDB保存" class="headerlink" title="selenium爬取京东商品+MongoDB保存"></a>selenium爬取京东商品+MongoDB保存</h1><h4 id="github：https-github-com-kokozh-JD"><a href="#github：https-github-com-kokozh-JD" class="headerlink" title="github：https://github.com/kokozh/JD"></a>github：<a href="https://github.com/kokozh/JD" target="_blank" rel="noopener">https://github.com/kokozh/JD</a></h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/16/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   
   
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://koko.ga/2019/11/18/%E8%AE%BE%E7%BD%AEjupyter%20notebook%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -303,8 +231,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/18/%E8%AE%BE%E7%BD%AEjupyter%20notebook%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/" class="post-title-link" itemprop="url">设置jupyter notebook远程访问</a>
+          设置jupyter notebook远程访问
         </h1>
 
         <div class="post-meta">
@@ -321,6 +248,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -331,115 +265,91 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="设置jupyter-notebook远程访问"><a href="#设置jupyter-notebook远程访问" class="headerlink" title="设置jupyter notebook远程访问"></a>设置jupyter notebook远程访问</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
+        <h1 id="设置jupyter-notebook远程访问"><a href="#设置jupyter-notebook远程访问" class="headerlink" title="设置jupyter notebook远程访问"></a>设置jupyter notebook远程访问</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
 <li>云主机(阿里云，腾讯云，或者别的什么免费的)</li>
 <li>系统: Ubuntu 16.06 (这是我的)</li>
 <li>已经安装python </li>
 <li>已经安装了jupyter</li>
 </ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/18/%E8%AE%BE%E7%BD%AEjupyter%20notebook%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+<a id="more"></a>
+
+<h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><p> <strong>1. 创建jupyter文件夹和配置文件[jupyter_notebook_config.py]</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/08/16/sB9doSOTRvAiWkZ.png" alt="1.png"></p>
+<p> <strong>2. 设置jupyter远程访问的密码</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook password</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/08/16/aCqmvFDSjr7cfwY.png" alt="3.png"></p>
+<p> <strong>3. 编辑配置文件</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /root/.jupyter/jupyter_notebook_config.py</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/08/16/rgdpBfZaDyTqHiJ.png" alt="4.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">找到对应项并进行修改(前面有#号的记得去掉)</span><br><span class="line">1, c.NotebookApp.open_browser = False</span><br><span class="line">[↑禁止自动打开浏览器]</span><br><span class="line">2, c.NotebookApp.allow_remote_access  = True</span><br><span class="line">[↑允许外部访问]</span><br><span class="line">3, c.NotebookApp.ip = &apos;*&apos;</span><br><span class="line">[↑localhost表示仅仅运行本地的访问，&apos; * &apos; 表示所有的ip都可以访问]</span><br><span class="line">4, c.NotebookApp.port = 8800</span><br><span class="line">[↑设置服务监听的端口(随便设，没被占用就行)]</span><br><span class="line">5, 保存退出</span><br></pre></td></tr></table></figure>
+<p> <strong>4. 防火墙允许开放该端口</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --zone=public --add-port=8800/tcp --permanent</span><br><span class="line">接着输入密码</span><br><span class="line">重启防火墙:</span><br><span class="line">sudo systemctl restart firewalld</span><br></pre></td></tr></table></figure>
+<p> <strong>5. 启动 jupyter notebook</strong> </p>
+<p> <em>但是我们发现把 ssh关掉后，jupyter服务就关闭了，这并不符合我们的要求，我们需要的是让它一直保持开启状态。</em></p>
+<p> <strong>6. nohub方法让 jupyter 服务一直保持运行</strong> </p>
+<ul>
+<li>安装 nohub(已经有的可以忽略这一步)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建一个screen窗口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">screen -S name (name是你自己起的窗口名字，方便一个该窗口用途)</span><br><span class="line">然后在该窗口启动 jupyter:</span><br><span class="line">jupyter notebook</span><br><span class="line">最后按CTRL + a ，再按一下 d 键，这时退出ssh登录也不会影响screen程序的执行</span><br></pre></td></tr></table></figure>
+<p><em>最后就是登录看看效果如何(ip为本机ip)</em></p>
+<p><img src="https://i.loli.net/2019/08/16/Rm1kdqhEsJaHBZr.png" alt="5.png"></p>
+
     </div>
 
     
     
     
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="ko君 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="ko君 Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://koko.ga/2019/11/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B0%8F%E8%AF%B4%E7%88%AC%E5%8F%96+%E6%9C%AC%E5%9C%B0%E4%BF%9D%E5%AD%98/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/top.jpg">
-      <meta itemprop="name" content="ko君">
-      <meta itemprop="description" content="时光偷不走我上扬的嘴角">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ko">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B0%8F%E8%AF%B4%E7%88%AC%E5%8F%96+%E6%9C%AC%E5%9C%B0%E4%BF%9D%E5%AD%98/" class="post-title-link" itemprop="url">多线程小说爬取+本地保存</a>
-        </h1>
-
-        <div class="post-meta">
-			
-		  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-16 19:52:06" itemprop="dateCreated datePublished" datetime="2019-11-16T19:52:06+08:00">2019-11-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-17 17:50:46" itemprop="dateModified" datetime="2019-11-17T17:50:46+08:00">2019-11-17</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="多线程小说爬取-本地保存-（2019-11-15）"><a href="#多线程小说爬取-本地保存-（2019-11-15）" class="headerlink" title="多线程小说爬取+本地保存 （2019/11/15）"></a>多线程小说爬取+本地保存 （2019/11/15）</h1><h3 id="只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！"><a href="#只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！" class="headerlink" title="只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！"></a>只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！</h3><h4 id="github-https-github-com-kokozh-novel"><a href="#github-https-github-com-kokozh-novel" class="headerlink" title="github: https://github.com/kokozh/novel"></a>github: <a href="https://github.com/kokozh/novel" target="_blank" rel="noopener">https://github.com/kokozh/novel</a></h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B0%8F%E8%AF%B4%E7%88%AC%E5%8F%96+%E6%9C%AC%E5%9C%B0%E4%BF%9D%E5%AD%98/#more" rel="contents">
-                Read more &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/11/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B0%8F%E8%AF%B4%E7%88%AC%E5%8F%96+%E6%9C%AC%E5%9C%B0%E4%BF%9D%E5%AD%98/" rel="next" title="多线程小说爬取+本地保存">
+                  <i class="fa fa-chevron-left"></i> 多线程小说爬取+本地保存
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
       </footer>
+    
   </article>
   
   
   
 
   </div>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
 
 
           </div>
@@ -468,6 +378,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设置jupyter-notebook远程访问"><span class="nav-number">1.</span> <span class="nav-text">设置jupyter notebook远程访问</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置过程"><span class="nav-number">1.2.</span> <span class="nav-text">配置过程</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
