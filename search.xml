@@ -1,63 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>设置jupyter notebook远程访问</title>
-    <url>/2019/11/18/%E8%AE%BE%E7%BD%AEjupyter%20notebook%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
-    <content><![CDATA[<h1 id="设置jupyter-notebook远程访问"><a href="#设置jupyter-notebook远程访问" class="headerlink" title="设置jupyter notebook远程访问"></a>设置jupyter notebook远程访问</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
-<li>云主机(阿里云，腾讯云，或者别的什么免费的)</li>
-<li>系统: Ubuntu 16.06 (这是我的)</li>
-<li>已经安装python </li>
-<li>已经安装了jupyter</li>
-</ul>
-<a id="more"></a>
-
-<h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><p> <strong>1. 创建jupyter文件夹和配置文件[jupyter_notebook_config.py]</strong> </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2019/08/16/sB9doSOTRvAiWkZ.png" alt="1.png"></p>
-<p> <strong>2. 设置jupyter远程访问的密码</strong> </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jupyter notebook password</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2019/08/16/aCqmvFDSjr7cfwY.png" alt="3.png"></p>
-<p> <strong>3. 编辑配置文件</strong> </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi /root/.jupyter/jupyter_notebook_config.py</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2019/08/16/rgdpBfZaDyTqHiJ.png" alt="4.png"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">找到对应项并进行修改(前面有#号的记得去掉)</span><br><span class="line">1, c.NotebookApp.open_browser = False</span><br><span class="line">[↑禁止自动打开浏览器]</span><br><span class="line">2, c.NotebookApp.allow_remote_access  = True</span><br><span class="line">[↑允许外部访问]</span><br><span class="line">3, c.NotebookApp.ip = &apos;*&apos;</span><br><span class="line">[↑localhost表示仅仅运行本地的访问，&apos; * &apos; 表示所有的ip都可以访问]</span><br><span class="line">4, c.NotebookApp.port = 8800</span><br><span class="line">[↑设置服务监听的端口(随便设，没被占用就行)]</span><br><span class="line">5, 保存退出</span><br></pre></td></tr></table></figure>
-<p> <strong>4. 防火墙允许开放该端口</strong> </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo firewall-cmd --zone=public --add-port=8800/tcp --permanent</span><br><span class="line">接着输入密码</span><br><span class="line">重启防火墙:</span><br><span class="line">sudo systemctl restart firewalld</span><br></pre></td></tr></table></figure>
-<p> <strong>5. 启动 jupyter notebook</strong> </p>
-<p> <em>但是我们发现把 ssh关掉后，jupyter服务就关闭了，这并不符合我们的要求，我们需要的是让它一直保持开启状态。</em></p>
-<p> <strong>6. nohub方法让 jupyter 服务一直保持运行</strong> </p>
-<ul>
-<li>安装 nohub(已经有的可以忽略这一步)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建一个screen窗口</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">screen -S name (name是你自己起的窗口名字，方便一个该窗口用途)</span><br><span class="line">然后在该窗口启动 jupyter:</span><br><span class="line">jupyter notebook</span><br><span class="line">最后按CTRL + a ，再按一下 d 键，这时退出ssh登录也不会影响screen程序的执行</span><br></pre></td></tr></table></figure>
-<p><em>最后就是登录看看效果如何(ip为本机ip)</em></p>
-<p><img src="https://i.loli.net/2019/08/16/Rm1kdqhEsJaHBZr.png" alt="5.png"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>多线程小说爬取+本地保存</title>
-    <url>/2019/11/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B0%8F%E8%AF%B4%E7%88%AC%E5%8F%96+%E6%9C%AC%E5%9C%B0%E4%BF%9D%E5%AD%98/</url>
-    <content><![CDATA[<h1 id="多线程小说爬取-本地保存-（2019-11-15）"><a href="#多线程小说爬取-本地保存-（2019-11-15）" class="headerlink" title="多线程小说爬取+本地保存 （2019/11/15）"></a>多线程小说爬取+本地保存 （2019/11/15）</h1><h3 id="只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！"><a href="#只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！" class="headerlink" title="只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！"></a>只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！</h3><h4 id="github-https-github-com-kokozh-novel"><a href="#github-https-github-com-kokozh-novel" class="headerlink" title="github: https://github.com/kokozh/novel"></a>github: <a href="https://github.com/kokozh/novel" target="_blank" rel="noopener">https://github.com/kokozh/novel</a></h4><a id="more"></a>
-
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><pre><code>* PYTHON
-* requests库
-* re库
-* multiprocessing库
-* time库
-* os库</code></pre><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><pre><code>* 网页并不复杂，就分析提取信息，然后本地保存
-* 多线程提取信息</code></pre><h2 id="函数说明"><a href="#函数说明" class="headerlink" title="函数说明"></a>函数说明</h2><pre><code>* get_page()  返回信息页面
-* get_data()  获取信息并保存</code></pre><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><pre><code>* book保存爬取的小说数据
-* novel.py 为主程序</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h4 id="这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）"><a href="#这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）" class="headerlink" title="这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）"></a>这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）</h4>]]></content>
-  </entry>
-  <entry>
     <title>淘宝模拟登录 + 商品爬取</title>
-    <url>/2019/11/16/%E6%B7%98%E5%AE%9D%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%20+%20%E5%95%86%E5%93%81%E7%88%AC%E5%8F%96/</url>
-    <content><![CDATA[<h1 id="淘宝模拟登录-商品爬取-（2019-11-7）"><a href="#淘宝模拟登录-商品爬取-（2019-11-7）" class="headerlink" title="淘宝模拟登录 + 商品爬取 （2019/11/7）"></a>淘宝模拟登录 + 商品爬取 （2019/11/7）</h1><h4 id="github：https-github-com-kokozh-taobao"><a href="#github：https-github-com-kokozh-taobao" class="headerlink" title="github：https://github.com/kokozh/taobao"></a>github：<a href="https://github.com/kokozh/taobao" target="_blank" rel="noopener">https://github.com/kokozh/taobao</a></h4><a id="more"></a>
+    <url>/2019/11/17/%E6%B7%98%E5%AE%9D%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%20+%20%E5%95%86%E5%93%81%E7%88%AC%E5%8F%96/</url>
+    <content><![CDATA[<center>github：https://github.com/kokozh/taobao</center>
+<a id="more"></a>
 
 <h2 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h2><pre><code>* PYTHON
 * requests库
@@ -79,12 +26,22 @@
 * 采用框架实现模拟滑动操作，极大的提高信息的获取效率
 * 采用多线程或分布式，将信息获取速度最大化
 * 挺粗糙的一个作品哈哈，有空会继续优化的</code></pre>]]></content>
+      <categories>
+        <category>PYTHON爬虫</category>
+      </categories>
+      <tags>
+        <tag>PYTHON</tag>
+      </tags>
   </entry>
   <entry>
     <title>优酷弹幕词云分析</title>
     <url>/2019/11/16/%E4%BC%98%E9%85%B7%E5%BC%B9%E5%B9%95%E8%AF%8D%E4%BA%91%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h1 id="优酷弹幕词云分析"><a href="#优酷弹幕词云分析" class="headerlink" title="优酷弹幕词云分析"></a>优酷弹幕词云分析</h1><h3 id="注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源"><a href="#注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源" class="headerlink" title="注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源"></a>注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源</h3><h4 id="github：https-github-com-kokozh-YOKU-python"><a href="#github：https-github-com-kokozh-YOKU-python" class="headerlink" title="github：https://github.com/kokozh/YOKU_python"></a>github：<a href="https://github.com/kokozh/YOKU_python" target="_blank" rel="noopener">https://github.com/kokozh/YOKU_python</a></h4><p>&nbsp;  <a id="more"></a></p>
-<p><strong>最近刚好在学习爬虫与数据分析，就想拿优酷的这部《我不能恋爱的女朋友》来分析一下，哈哈哈哈我也有在看，剧情有点搞笑。闲话不多说，进入主题吧！</strong></p>
+    <content><![CDATA[<center>github：https://github.com/kokozh/YOKU_python</center>
+<a id="more"></a>
+
+
+
+<h3 id="注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源"><a href="#注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源" class="headerlink" title="注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源"></a>注意！！！此教程只是出于学习交流目的，请不要恶意用于消耗某酷服务器资源</h3><p><strong>最近刚好在学习爬虫与数据分析，就想拿优酷的这部《我不能恋爱的女朋友》来分析一下，哈哈哈哈我也有在看，剧情有点搞笑。闲话不多说，进入主题吧！</strong></p>
 <h4 id="技术方案"><a href="#技术方案" class="headerlink" title="技术方案"></a>技术方案</h4><ul>
 <li>分析弹幕加载方式，用requests库进行爬取</li>
 <li>这里就只爬取8集的弹幕</li>
@@ -122,11 +79,40 @@
 </ul>
 <h3 id="数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。"><a href="#数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。" class="headerlink" title="数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。"></a>数据清洗虽然我这里没有做，但是从刚才的词云可以看出，哈哈哈这些词没多大意义，可以洗掉的啦。这只是一只粗略，简陋的蜘蛛，还没有很好，还有很多地方可以优化。这里就留给大家自己优化学习喽。</h3><p>&nbsp; </p>
 ]]></content>
+      <categories>
+        <category>PYTHON爬虫</category>
+      </categories>
+      <tags>
+        <tag>PYTHON</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多线程小说爬取+本地保存</title>
+    <url>/2019/11/15/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B0%8F%E8%AF%B4%E7%88%AC%E5%8F%96+%E6%9C%AC%E5%9C%B0%E4%BF%9D%E5%AD%98/</url>
+    <content><![CDATA[<center>github: https://github.com/kokozh/novel</center>
+<a id="more"></a>
+
+<h3 id="只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！"><a href="#只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！" class="headerlink" title="只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！"></a>只是出于学习交流目的，禁止用于恶意消耗别人服务器资源！！！</h3><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><pre><code>* PYTHON
+* requests库
+* re库
+* multiprocessing库
+* time库
+* os库</code></pre><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><pre><code>* 网页并不复杂，就分析提取信息，然后本地保存
+* 多线程提取信息</code></pre><h2 id="函数说明"><a href="#函数说明" class="headerlink" title="函数说明"></a>函数说明</h2><pre><code>* get_page()  返回信息页面
+* get_data()  获取信息并保存</code></pre><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><pre><code>* book保存爬取的小说数据
+* novel.py 为主程序</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h4 id="这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）"><a href="#这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）" class="headerlink" title="这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）"></a>这个程序很简单，结构上也没有很好，网站也没有什么反爬什么验证码，这里主要是想体现一下多线程的运用。（数据不多，只弄了九百来章）</h4>]]></content>
+      <categories>
+        <category>PYTHON爬虫</category>
+      </categories>
+      <tags>
+        <tag>PYTHON</tag>
+      </tags>
   </entry>
   <entry>
     <title>selenium爬取京东商品+MongoDB保存</title>
     <url>/2019/11/15/selenium%E7%88%AC%E5%8F%96%E4%BA%AC%E4%B8%9C%E5%95%86%E5%93%81+MongoDB%E4%BF%9D%E5%AD%98/</url>
-    <content><![CDATA[<h4 id="github：https-github-com-kokozh-JD"><a href="#github：https-github-com-kokozh-JD" class="headerlink" title="github：https://github.com/kokozh/JD"></a>github：<a href="https://github.com/kokozh/JD" target="_blank" rel="noopener">https://github.com/kokozh/JD</a></h4><a id="more"></a>
+    <content><![CDATA[<center>github：https://github.com/kokozh/JD</center>
+<a id="more"></a>
 
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><pre><code>* PYTHON
 * 已安装MongoDB数据库
@@ -147,6 +133,53 @@
       </categories>
       <tags>
         <tag>PYTHON</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设置jupyter notebook远程访问</title>
+    <url>/2019/11/10/%E8%AE%BE%E7%BD%AEjupyter%20notebook%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
+    <content><![CDATA[<center>github：https://github.com/kokozh/jupyter</center>
+
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
+<li>云主机(阿里云，腾讯云，或者别的什么免费的)</li>
+<li>系统: Ubuntu 16.06 (这是我的)</li>
+<li>已经安装python </li>
+<li>已经安装了jupyter</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><p> <strong>1. 创建jupyter文件夹和配置文件[jupyter_notebook_config.py]</strong> </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/08/16/sB9doSOTRvAiWkZ.png" alt="1.png"></p>
+<p> <strong>2. 设置jupyter远程访问的密码</strong> </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jupyter notebook password</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/08/16/aCqmvFDSjr7cfwY.png" alt="3.png"></p>
+<p> <strong>3. 编辑配置文件</strong> </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi /root/.jupyter/jupyter_notebook_config.py</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/08/16/rgdpBfZaDyTqHiJ.png" alt="4.png"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">找到对应项并进行修改(前面有#号的记得去掉)</span><br><span class="line">1, c.NotebookApp.open_browser = False</span><br><span class="line">[↑禁止自动打开浏览器]</span><br><span class="line">2, c.NotebookApp.allow_remote_access  = True</span><br><span class="line">[↑允许外部访问]</span><br><span class="line">3, c.NotebookApp.ip = &apos;*&apos;</span><br><span class="line">[↑localhost表示仅仅运行本地的访问，&apos; * &apos; 表示所有的ip都可以访问]</span><br><span class="line">4, c.NotebookApp.port = 8800</span><br><span class="line">[↑设置服务监听的端口(随便设，没被占用就行)]</span><br><span class="line">5, 保存退出</span><br></pre></td></tr></table></figure>
+<p> <strong>4. 防火墙允许开放该端口</strong> </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo firewall-cmd --zone=public --add-port=8800/tcp --permanent</span><br><span class="line">接着输入密码</span><br><span class="line">重启防火墙:</span><br><span class="line">sudo systemctl restart firewalld</span><br></pre></td></tr></table></figure>
+<p> <strong>5. 启动 jupyter notebook</strong> </p>
+<p> <em>但是我们发现把 ssh关掉后，jupyter服务就关闭了，这并不符合我们的要求，我们需要的是让它一直保持开启状态。</em></p>
+<p> <strong>6. nohub方法让 jupyter 服务一直保持运行</strong> </p>
+<ul>
+<li>安装 nohub(已经有的可以忽略这一步)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建一个screen窗口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">screen -S name (name是你自己起的窗口名字，方便一个该窗口用途)</span><br><span class="line">然后在该窗口启动 jupyter:</span><br><span class="line">jupyter notebook</span><br><span class="line">最后按CTRL + a ，再按一下 d 键，这时退出ssh登录也不会影响screen程序的执行</span><br></pre></td></tr></table></figure>
+<p><em>最后就是登录看看效果如何(ip为本机ip)</em></p>
+<p><img src="https://i.loli.net/2019/08/16/Rm1kdqhEsJaHBZr.png" alt="5.png"></p>
+]]></content>
+      <categories>
+        <category>jupyter</category>
+      </categories>
+      <tags>
+        <tag>Jupyter</tag>
       </tags>
   </entry>
 </search>
