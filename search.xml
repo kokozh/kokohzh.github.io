@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>手机抖音app无水印视频下载</title>
+    <url>/2019/11/21/%E6%89%8B%E6%9C%BA%E6%8A%96%E9%9F%B3app%E6%97%A0%E6%B0%B4%E5%8D%B0%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<h1 id="手机抖音app无水印视频下载"><a href="#手机抖音app无水印视频下载" class="headerlink" title="手机抖音app无水印视频下载"></a>手机抖音app无水印视频下载</h1><h3 id="禁止恶意使用，仅交流学习！"><a href="#禁止恶意使用，仅交流学习！" class="headerlink" title="禁止恶意使用，仅交流学习！"></a>禁止恶意使用，仅交流学习！</h3><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><pre><code>* PYTHON
+* charles抓包软件
+* requests库
+* jsonpath库
+* time库
+* re库</code></pre><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><ul>
+<li>charles抓包，抓接口</li>
+<li>获取sec_user_id，max_cursor信息，url构造</li>
+<li>反爬处理</li>
+</ul>
+<h2 id="函数说明"><a href="#函数说明" class="headerlink" title="函数说明"></a>函数说明</h2><ul>
+<li>get_uid()                     获取sec_user_id参数</li>
+<li>get_videourl()            获取视频无水印下载链接</li>
+<li>down()                         下载视频到本地        </li>
+</ul>
+<h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><pre><code>* douyi.py是代码文件
+* video文件夹存放下载的视频（这里只放了几个图）</code></pre><h2 id="闲聊几句"><a href="#闲聊几句" class="headerlink" title="闲聊几句"></a>闲聊几句</h2><p>在用charles抓包的时候，虽然能拿到链接，但是无论怎么构造都返回空信息，很难受有木有。后来发现是有个_signature这个参数，啧啧啧，立马浏览器断点一波操作。结果发现，孩子醒醒你对这个不熟…..就放弃啦（其实有努力挣扎了好久）。</p>
+<p>目前我找到的这个是可以爬个人喜欢的视频的，别的一堆也没怎么搞，有空再搞吧。</p>
+<p>使用的话就复制分享链接就好了。</p>
+<h4 id="示范操作"><a href="#示范操作" class="headerlink" title="示范操作"></a>示范操作</h4><ul>
+<li><p>打开抖音app选择你喜欢的人的主页<br><img src="https://i.loli.net/2019/11/21/U9kDtFVOWmRw2Ad.png" alt="1.png"></p>
+</li>
+<li><p>点击<br><img src="https://i.loli.net/2019/11/21/vxlgsWh9dfkHpXL.png" alt="2.png"> </p>
+</li>
+<li><p>复制链接<br><img src="https://i.loli.net/2019/11/21/HyzQN82qAj7DLU9.png" alt="3.png"></p>
+<ul>
+<li>运行程序，将链接复制进去<br><img src="https://i.loli.net/2019/11/21/liUrKgJa1wnGCOH.png" alt="5.png"></li>
+</ul>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>淘宝模拟登录 + 商品爬取</title>
     <url>/2019/11/17/%E6%B7%98%E5%AE%9D%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%20+%20%E5%95%86%E5%93%81%E7%88%AC%E5%8F%96/</url>
     <content><![CDATA[<center>github：https://github.com/kokozh/taobao</center>
